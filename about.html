@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | NoLimits Events Bengaluru - Our Team & Story</title>
+  <meta name="description" content="Learn about NoLimits Events, Bengaluru's passionate creative team of floral designers, executive chefs, photographers, and makeup artists dedicated to designing unforgettable celebrations.">
+  <link rel="canonical" href="https://www.example.com/about.html">
+
+  <meta property="og:title" content="About NoLimits Events | Bengaluru Event Designers">
+  <meta property="og:description" content="Four crafts, one team. Discover our heritage, core values, and creative team in Bengaluru.">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta name="theme-color" content="#070707">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Manrope:wght@400;500;600&family=Noto+Serif+Kannada:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <script defer src="data/site.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="scroll-progress" style="position: fixed; top: 0; left: 0; height: 3px; background: var(--gold-foil); width: 0%; z-index: 10000;"></div>
+  <div id="page-curtain"></div>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" aria-label="Loading site">
+    <div class="preloader-doors"><div class="preloader-door left"></div><div class="preloader-door right"></div></div>
+    <div class="preloader-content">
+      <div class="preloader-greeting">ಸ್ವಾಗತ</div>
+      <div style="font-family: var(--font-display); font-size: 1.6rem; color: var(--gold-light);">NO LIMITS</div>
+      <button id="preloader-skip" class="preloader-skip">SKIP INTRO</button>
+    </div>
+  </div>
+
+  <!-- Floating Pill Header -->
+  <header class="site-header" role="banner">
+    <div class="nav-pill-wrapper">
+      <nav class="nav-pill" aria-label="Main Navigation">
+        <a href="index.html" class="header-logo">
+          <img src="assets/images/logo.png" alt="NoLimits Events Logo" width="120" height="40">
+          <div class="logo-text-group">
+            <span class="logo-wordmark"><span class="n-cyan">N</span>O LIMIT<span class="s-pink">S</span></span>
+            <span class="logo-subtext">WE DESIGN YOU CELEBRATE</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" role="menubar">
+          <li class="nav-link-item"><a href="index.html">Home</a></li>
+          <li class="nav-link-item"><a href="about.html">About</a></li>
+          <li class="nav-link-item"><a href="services.html">Services</a></li>
+          <li class="nav-link-item"><a href="event-gallery.html">Event Gallery</a></li>
+          <li class="nav-link-item"><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="header-cta">
+          <a href="contact.html" class="btn-pill btn-primary">Plan Your Celebration <span class="btn-arrow-badge">→</span></a>
+        </div>
+
+        <button id="mobile-hamburger" class="mobile-hamburger" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div id="mobile-menu" aria-label="Mobile Navigation">
+    <div class="mobile-toran-edge"></div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="logo-wordmark" style="font-size: 1.4rem;"><span class="n-cyan">N</span>O LIMIT<span class="s-pink">S</span></span>
+      <button id="mobile-menu-close" style="color: var(--gold-light); font-size: 1.8rem;">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home <span>→</span></a></li>
+      <li><a href="about.html">About <span>→</span></a></li>
+      <li><a href="services.html">Services <span>→</span></a></li>
+      <li><a href="event-gallery.html">Event Gallery <span>→</span></a></li>
+      <li><a href="contact.html">Contact <span>→</span></a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+    <!-- PAGE HERO -->
+    <section style="padding-top: clamp(140px, 16vh, 180px); padding-bottom: 60px;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+          <div>
+            <div class="tag-badge"><span class="dot-pink"></span> OUR STORY & PHILOSOPHY</div>
+            <h1 class="font-display" style="font-size: var(--fs-h1); margin-top: 16px; line-height: 1.1;">
+              THE TEAM BEHIND THE <br><span class="text-gold-foil">CELEBRATION</span>
+            </h1>
+            <p style="margin-top: 16px; color: var(--text-muted); font-size: var(--fs-body);">
+              NoLimits Events was founded in Bengaluru with a singular vision: to unify the four foundational pillars of Indian celebrations — Food Catering, Event Décor, Photography, and Makeup Artistry — under one creative roof.
+            </p>
+          </div>
+          <div>
+            <div class="hero-image-frame" style="max-height: 440px;">
+              <img src="assets/images/about-team-hero.svg" alt="NoLimits Creative Team Bengaluru" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOLD PULL-QUOTE STORY -->
+    <section class="section-rounded section-dark" style="padding: clamp(50px, 6vw, 80px) 0;">
+      <div class="container" style="max-width: 900px; text-align: center;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--gold)" style="margin: 0 auto 20px auto;"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4vwv10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <blockquote class="font-display" style="font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-style: italic; color: var(--gold-light); line-height: 1.3;">
+          "We believe an event is not merely an assembly of tents and tables, but a sacred gathering of loved ones. We design the backdrop so you can live the memory."
+        </blockquote>
+        <p style="margin-top: 16px; font-family: var(--font-nav); font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted);">— THE NO LIMITS EXECUTIVE BOARD</p>
+      </div>
+    </section>
+
+    <!-- FOUR CRAFTS ONE TEAM -->
+    <section style="padding: clamp(60px, 8vw, 100px) 0;">
+      <div class="container">
+        <div class="section-header center">
+          <div class="tag-badge"><span class="dot-cyan"></span> IN-HOUSE SYNERGY</div>
+          <h2 class="section-title">FOUR CRAFTS, ONE TEAM</h2>
+          <p style="max-width: 550px; color: var(--text-muted);">Why deal with four separate vendors when one cohesive creative studio can manage it all flawlessly?</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+          <div style="background: var(--ink); border: 1px solid rgba(217,164,65,0.25); border-radius: var(--radius-card); padding: 30px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(217,164,65,0.15); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.4rem;">🍳</div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light); margin-top: 16px;">1. Culinary Kitchen</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">Master chefs specializing in traditional South Indian banana leaf meals, live chaat stations, and global fusion cuisine.</p>
+          </div>
+
+          <div style="background: var(--ink); border: 1px solid rgba(217,164,65,0.25); border-radius: var(--radius-card); padding: 30px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(217,164,65,0.15); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.4rem;">🌸</div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light); margin-top: 16px;">2. Décor Studio</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">Floral architects crafting custom temple arches, floral mandaps, ambient warm lighting, and thematic backdrops.</p>
+          </div>
+
+          <div style="background: var(--ink); border: 1px solid rgba(217,164,65,0.25); border-radius: var(--radius-card); padding: 30px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(217,164,65,0.15); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.4rem;">📷</div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light); margin-top: 16px;">3. Cinema & Photo</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">Candid storytellers capturing raw emotional moments, 4K teasers, and handcrafted leather flush-mount albums.</p>
+          </div>
+
+          <div style="background: var(--ink); border: 1px solid rgba(217,164,65,0.25); border-radius: var(--radius-card); padding: 30px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(217,164,65,0.15); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.4rem;">💄</div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light); margin-top: 16px;">4. Makeup Artistry</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">Senior HD and Airbrush bridal artists bringing out radiant natural beauty for camera and crowd alike.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE TEAM CARDS -->
+    <section class="section-rounded section-dark" style="padding: clamp(60px, 8vw, 100px) 0;">
+      <div class="container">
+        <div class="section-header center">
+          <div class="tag-badge"><span class="dot-pink"></span> OUR LEADERSHIP</div>
+          <h2 class="section-title">MEET OUR LEAD DESIGNERS</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+          <!-- Member 1 -->
+          <div style="background: var(--charcoal); border: 1px solid rgba(217,164,65,0.2); border-radius: var(--radius-card); overflow: hidden; text-align: center; padding: 20px;">
+            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 16px auto; border: 2px solid var(--gold);">
+              <img src="assets/images/team-01.svg" alt="Vikram Sharma" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light);">Vikram Sharma</h3>
+            <p style="font-family: var(--font-nav); font-size: 0.72rem; color: var(--pink); letter-spacing: 1px; margin-top: 4px;">FOUNDER & CREATIVE DIRECTOR</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 10px;">Over a decade of luxury event planning expertise across Bengaluru.</p>
+          </div>
+
+          <!-- Member 2 -->
+          <div style="background: var(--charcoal); border: 1px solid rgba(217,164,65,0.2); border-radius: var(--radius-card); overflow: hidden; text-align: center; padding: 20px;">
+            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 16px auto; border: 2px solid var(--gold);">
+              <img src="assets/images/team-02.svg" alt="Ananya Rao" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light);">Ananya Rao</h3>
+            <p style="font-family: var(--font-nav); font-size: 0.72rem; color: var(--pink); letter-spacing: 1px; margin-top: 4px;">LEAD FLORAL DESIGNER</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 10px;">Master of traditional temple motifs and modern floral installations.</p>
+          </div>
+
+          <!-- Member 3 -->
+          <div style="background: var(--charcoal); border: 1px solid rgba(217,164,65,0.2); border-radius: var(--radius-card); overflow: hidden; text-align: center; padding: 20px;">
+            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 16px auto; border: 2px solid var(--gold);">
+              <img src="assets/images/team-03.svg" alt="Chef Rajesh Kumar" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light);">Chef Rajesh Kumar</h3>
+            <p style="font-family: var(--font-nav); font-size: 0.72rem; color: var(--pink); letter-spacing: 1px; margin-top: 4px;">EXECUTIVE CULINARY DIRECTOR</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 10px;">Specializing in regional banana leaf feasts and gourmet counters.</p>
+          </div>
+
+          <!-- Member 4 -->
+          <div style="background: var(--charcoal); border: 1px solid rgba(217,164,65,0.2); border-radius: var(--radius-card); overflow: hidden; text-align: center; padding: 20px;">
+            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 16px auto; border: 2px solid var(--gold);">
+              <img src="assets/images/team-04.svg" alt="Priya Nair" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 class="font-display" style="font-size: 1.3rem; color: var(--gold-light);">Priya Nair</h3>
+            <p style="font-family: var(--font-nav); font-size: 0.72rem; color: var(--pink); letter-spacing: 1px; margin-top: 4px;">SENIOR MAKEUP ARTIST</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 10px;">Renowned bridal makeup artist creating radiant, long-lasting HD looks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY CARD CTA -->
+    <section style="padding: clamp(60px, 8vw, 100px) 0;">
+      <div class="container">
+        <div class="section-rounded section-sand" style="padding: clamp(40px, 6vw, 60px); text-align: center;">
+          <h2 class="font-display" style="font-size: var(--fs-h2); color: var(--text-dark);">READY TO MEET OUR TEAM?</h2>
+          <p style="color: var(--text-dark-muted); max-width: 500px; margin: 12px auto 24px auto;">Schedule an in-person consultation or menu tasting session at our Indiranagar studio.</p>
+          <a href="contact.html" class="btn-pill btn-primary">Book Consultation <span class="btn-arrow-badge">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GIANT FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-divider">
+        <svg width="40" height="20" viewBox="0 0 40 20" fill="var(--gold)"><path d="M20 0C10 0 5 10 0 20h40C35 10 30 0 20 0z"/></svg>
+      </div>
+
+      <div class="footer-nav-row">
+        <div>
+          <span class="logo-wordmark" style="font-size: 1.6rem;"><span class="n-cyan">N</span>O LIMIT<span class="s-pink">S</span></span>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">WE DESIGN YOU CELEBRATE</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="event-gallery.html">Event Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-giant-wordmark-container">
+        <div class="footer-giant-wordmark text-gold-foil">
+          <span class="n-cyan">N</span>O LIMIT<span class="s-pink">S</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-kannada">ಸ್ವಾಗತ · Welcome to Bengaluru</div>
+        <div>© 2026 NoLimits Events. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <a id="whatsapp-float-btn" class="whatsapp-float-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+  <div id="custom-cursor-dot"></div>
+  <div id="custom-cursor-ring"></div>
+</body>
+</html>

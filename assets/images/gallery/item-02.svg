@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12100d"/>
+      <stop offset="50%" stop-color="weddings"/>
+      <stop offset="100%" stop-color="#070707"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A9741F"/>
+      <stop offset="35%" stop-color="#F3D58A"/>
+      <stop offset="65%" stop-color="#D9A441"/>
+      <stop offset="100%" stop-color="#8F5E14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d9a441" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d9a441" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="jaali" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 60 30 L 30 60 L 0 30 Z" fill="none" stroke="#d9a441" stroke-width="0.75" stroke-opacity="0.12"/>
+      <circle cx="30" cy="30" r="8" fill="none" stroke="#d9a441" stroke-width="0.75" stroke-opacity="0.12"/>
+      <circle cx="30" cy="30" r="3" fill="#d9a441" fill-opacity="0.12"/>
+    </pattern>
+    <clipPath id="archClip">
+      <path d="M 100 800 L 100 350 C 100 150 250 50 600 50 C 950 50 1100 150 1100 350 L 1100 800 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)" />
+  <rect width="1200" height="800" fill="url(#jaali)" />
+  <circle cx="600" cy="400" r="450" fill="url(#glow)" />
+
+  <!-- Outer Mehrab Arch Frame -->
+  <path d="M 150 780 L 150 350 C 150 180 300 80 600 80 C 900 80 1050 180 1050 350 L 1050 780" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.4" />
+  <path d="M 170 780 L 170 355 C 170 195 315 100 600 100 C 885 100 1030 195 1030 355 L 1030 780" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.25" />
+
+  <!-- Corner Ornamental Leaf Motif -->
+  <g stroke="url(#goldGrad)" fill="none" stroke-width="1.5" opacity="0.5">
+    <path d="M 600 110 C 580 130 550 130 550 160 C 550 180 600 200 600 200 C 600 200 650 180 650 160 C 650 130 620 130 600 110 Z" fill="url(#goldGrad)" fill-opacity="0.1"/>
+    <circle cx="600" cy="200" r="4" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Hanging Diya Motif -->
+  <g opacity="0.7">
+    <line x1="250" y1="0" x2="250" y2="180" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M 240 180 C 240 195 260 195 260 180 Z" fill="url(#goldGrad)"/>
+    <path d="M 250 178 Q 248 165 250 155 Q 252 165 250 178 Z" fill="#FF1F8E"/>
+    
+    <line x1="950" y1="0" x2="950" y2="180" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M 940 180 C 940 195 960 195 960 180 Z" fill="url(#goldGrad)"/>
+    <path d="M 950 178 Q 948 165 950 155 Q 952 165 950 178 Z" fill="#FF1F8E"/>
+  </g>
+
+  <!-- Center Content Badge -->
+  <g transform="translate(600, 420)" text-anchor="middle">
+    <!-- Category Badge -->
+    <rect x="-140" y="-140" width="280" height="32" rx="16" fill="#1A1814" stroke="url(#goldGrad)" stroke-width="1" opacity="0.9"/>
+    <text x="0" y="-119" font-family="'Cinzel', Georgia, serif" font-size="12" font-weight="600" letter-spacing="4" fill="#F3D58A">CELEBRATION</text>
+
+    <!-- Decorative Lotus -->
+    <path d="M 0 -70 C -15 -50 -35 -50 -25 -30 C -15 -10 0 0 0 0 C 0 0 15 -10 25 -30 C 35 -50 15 -50 0 -70 Z" fill="url(#goldGrad)" opacity="0.8"/>
+
+    <!-- Main Title -->
+    <text x="0" y="50" font-family="'Cormorant Garamond', Georgia, serif" font-size="52" font-weight="700" letter-spacing="2" fill="#F6EFE3">LIVE TANDOOR & CHAAT STATION</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="95" font-family="'Manrope', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="3" fill="#D9A441">WEDDINGS · CATERING</text>
+    
+    <!-- Lotus Line Ornament -->
+    <path d="M -120 130 L -30 130 M 30 130 L 120 130" stroke="url(#goldGrad)" stroke-width="1" opacity="0.6"/>
+    <circle cx="0" cy="130" r="4" fill="url(#goldGrad)"/>
+    <circle cx="-15" cy="130" r="2" fill="url(#goldGrad)"/>
+    <circle cx="15" cy="130" r="2" fill="url(#goldGrad)"/>
+  </g>
+</svg>

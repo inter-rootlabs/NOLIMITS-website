@@ -36,6 +36,16 @@ function initHeroSlider() {
   heroImageContainer.innerHTML = '';
   thumbsContainer.innerHTML = '';
 
+  // Sliding carousel track holding every slide side by side
+  const track = document.createElement('div');
+  track.className = 'hero-slide-track';
+  heroImageContainer.appendChild(track);
+
+  // Pagination dots
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'hero-slide-dots';
+  heroImageContainer.appendChild(dotsWrap);
+
   slidesData.forEach((slide, index) => {
     // Image element
     const img = document.createElement('img');
@@ -43,7 +53,18 @@ function initHeroSlider() {
     img.alt = slide.title;
     img.className = `hero-slide-img ${index === 0 ? 'active' : ''}`;
     img.dataset.index = index;
-    heroImageContainer.appendChild(img);
+    img.draggable = false;
+    if (index > 0) img.loading = 'lazy';
+    track.appendChild(img);
+
+    const dot = document.createElement('button');
+    dot.className = `hero-slide-dot ${index === 0 ? 'active' : ''}`;
+    dot.setAttribute('aria-label', `Show ${slide.title}`);
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+      resetAutoSlide();
+    });
+    dotsWrap.appendChild(dot);
 
     // Thumbnail element
     const thumb = document.createElement('div');
@@ -77,7 +98,7 @@ function initHeroSlider() {
   // Keyboard navigation
   document.addEventListener('keydown', (e) => {
     const heroSec = document.querySelector('.hero-section');
-    if (!heroSec) return;
+    if (!heroSec || e.target.closest('input, textarea, select')) return;
 
     if (e.key === 'ArrowRight') {
       goToSlide((currentIndex + 1) % slidesData.length);
@@ -109,10 +130,14 @@ function initHeroSlider() {
     currentIndex = index;
     const slideData = slidesData[index];
 
-    // Toggle active slide image
+    // Slide the carousel track and toggle active image / dot
+    track.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
     const imgs = heroImageContainer.querySelectorAll('.hero-slide-img');
     imgs.forEach((img, i) => {
       img.classList.toggle('active', i === index);
+    });
+    dotsWrap.querySelectorAll('.hero-slide-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
     });
 
     // Toggle active thumbnail
@@ -148,7 +173,7 @@ function initHeroSlider() {
 
   // Pause on hover
   heroImageContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-  heroImageContainer.addEventListener('mouseleave', startAutoSlide);
+  heroImageContainer.addEventListener('mouseleave', resetAutoSlide);
 
   startAutoSlide();
 }

@@ -144,27 +144,25 @@ function initHeaderAndNav() {
     }
   });
 
-  // Sticky Header on Scroll
-  let lastScrollY = window.scrollY;
+  // Sticky Header on Scroll (always visible; rAF-throttled with hysteresis to avoid flicker)
+  let headerTicking = false;
 
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+  function updateHeader() {
+    const y = window.scrollY;
+    if (y > 100) header.classList.add('scrolled');
+    else if (y < 60) header.classList.remove('scrolled');
+    headerTicking = false;
+  }
 
-    if (currentScrollY > 80) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-
-    // Hide header on scroll down, show on scroll up
-    if (currentScrollY > 300 && currentScrollY > lastScrollY) {
-      header.classList.add('hidden');
-    } else {
-      header.classList.remove('hidden');
-    }
-
-    lastScrollY = currentScrollY;
-  });
+  if (header) {
+    updateHeader();
+    window.addEventListener('scroll', () => {
+      if (!headerTicking) {
+        headerTicking = true;
+        requestAnimationFrame(updateHeader);
+      }
+    }, { passive: true });
+  }
 
   // Mobile Hamburger Toggle
   if (hamburger && mobileMenu) {
@@ -214,22 +212,42 @@ function initSmoothScroll() {
       smoothTouch: false
     });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Sync GSAP ScrollTrigger if available
+    // Drive Lenis from a single loop (GSAP ticker if present, else rAF) so it never double-steps
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
       });
-      gsap.ticker.lagSmoothing(0, 0);
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
     }
+
+    window.__lenis = lenis;
   }
+
+  // Smooth-scroll in-page anchor links, offset below the floating header pill
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    const id = link.getAttribute('href');
+    if (id.length < 2) return;
+    const target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    const offset = -110;
+    if (window.__lenis) {
+      window.__lenis.scrollTo(target, { offset });
+    } else {
+      const top = target.getBoundingClientRect().top + window.scrollY + offset;
+      window.scrollTo({ top, behavior: isReducedMotion ? 'auto' : 'smooth' });
+    }
+  });
 }
 
 /* --------------------------------------------------------------------------
@@ -364,11 +382,17 @@ function initScrollProgress() {
   const progressBar = document.getElementById('scroll-progress');
   if (!progressBar) return;
 
+  let progressTicking = false;
   window.addEventListener('scroll', () => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
-    progressBar.style.width = `${progress}%`;
-  });
+    if (progressTicking) return;
+    progressTicking = true;
+    requestAnimationFrame(() => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+      progressBar.style.width = `${progress}%`;
+      progressTicking = false;
+    });
+  }, { passive: true });
 }
 
 /* --------------------------------------------------------------------------

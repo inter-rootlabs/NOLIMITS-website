@@ -41,11 +41,11 @@ const SITE_CONFIG = {
       title: "FOOD CATERING",
       subtitle: "ARTISANAL FEASTS & LIVE COUNTERS",
       description: "Customized regional, authentic South Indian & international culinary experiences crafted by master chefs for your guests.",
-      image: "assets/images/hero-catering.svg",
-      thumb: "assets/images/thumb-catering.svg",
+      image: "assets/images/events/catering/catering-04.jpg",
+      thumb: "assets/images/events/catering/catering-04.jpg",
       callouts: [
         { text: "Live Chaat & Tandoor Counters", position: "top-right" },
-        { text: "Customized Tasting Sessions", position: "bottom-left" }
+        { text: "Banana-Leaf Grand Feasts", position: "bottom-left" }
       ],
       link: "services.html#catering"
     },
@@ -55,8 +55,8 @@ const SITE_CONFIG = {
       titleAccent: "ROYAL MANDAPS & STAGE SETUPS",
       subtitle: "BENGALURU'S FINEST FLORAL ARCHITECTURE",
       description: "Bespoke floral design, traditional temple arch aesthetics, fairytale lighting, and thematic entrance setups for grand occasions.",
-      image: "assets/images/hero-decor.svg",
-      thumb: "assets/images/thumb-decor.svg",
+      image: "assets/images/events/decor-wedding/decor-wedding-06.jpg",
+      thumb: "assets/images/events/decor-wedding/decor-wedding-06.jpg",
       callouts: [
         { text: "Handcrafted Floral Mandap", position: "top-right" },
         { text: "Ambient Temple Lighting", position: "bottom-left" }
@@ -64,25 +64,25 @@ const SITE_CONFIG = {
       link: "services.html#decor"
     },
     {
-      id: "photography",
-      title: "PHOTOGRAPHY",
+      id: "birthdays",
+      title: "BIRTHDAY DÉCOR",
       subtitle: "CINEMATIC CANDID STORYTELLING",
       description: "Preserving emotional moments, royal portraits, pre-wedding films, and heirloom albums that last for generations.",
-      image: "assets/images/hero-photography.svg",
-      thumb: "assets/images/thumb-photography.svg",
+      image: "assets/images/events/decor-birthday/decor-birthday-08.jpg",
+      thumb: "assets/images/events/decor-birthday/decor-birthday-08.jpg",
       callouts: [
-        { text: "4K Cinematic Teasers", position: "top-right" },
-        { text: "Same-Day Highlight Edits", position: "bottom-left" }
+        { text: "Theme Balloon Styling", position: "top-right" },
+        { text: "Custom Name Backdrops", position: "bottom-left" }
       ],
-      link: "services.html#photography"
+      link: "services.html#decor"
     },
     {
       id: "makeup",
       title: "MAKEUP ARTISTRY",
       subtitle: "BRIDAL & CELEBRATION BEAUTY",
       description: "HD & Airbrush bridal artistry, exquisite hair styling, saree draping, and flawless party looks tailored to your personality.",
-      image: "assets/images/hero-makeup.svg",
-      thumb: "assets/images/thumb-makeup.svg",
+      image: "assets/images/events/makeup/makeup-07.jpg",
+      thumb: "assets/images/events/makeup/makeup-07.jpg",
       callouts: [
         { text: "On-Location Touchup Team", position: "top-right" },
         { text: "Premium International Brands", position: "bottom-left" }
@@ -93,8 +93,8 @@ const SITE_CONFIG = {
 
   // Animated Counter Stats (Placeholders to confirm with client)
   stats: [
-    { number: 500, suffix: "+", label: "CELEBRATIONS DESIGNED" },
-    { number: 100, suffix: "+", label: "HAPPY FAMILIES & CLIENTS" },
+    { number: 1000, suffix: "+", label: "CELEBRATIONS DESIGNED" },
+    { number: 2000, suffix: "+", label: "HAPPY CLIENTS" },
     { number: 4, suffix: "", label: "CORE CRAFTS IN-HOUSE" },
     { number: 1, suffix: "", label: "DEDICATED EVENT DIRECTOR" }
   ],
@@ -173,14 +173,13 @@ const SITE_CONFIG = {
       subtitle: "Regional Feasts, Live Stations & Gourmet Desserts",
       image: "assets/images/service-catering.svg",
       summary: "Culinary excellence that delights every palate. From traditional South Indian banana leaf meals to elaborate multi-cuisine wedding buffets.",
-      description: "Our catering wing brings together veteran chefs and attentive service staff to craft unforgettable dining experiences. We handle menu design, tasting sessions, live cooking stations, hygienic food prep, and flawless presentation.",
+      description: "Our catering wing brings together veteran chefs and attentive service staff to craft unforgettable dining experiences. We handle menu design, live cooking stations, hygienic food prep, and flawless presentation.",
       included: [
         "Traditional South Indian Banana Leaf Feasts & Prasadam",
         "North Indian Royal Dawat & Mughlai Specialties",
         "Live Interactive Stations (Chaat, Dosa, Tandoor, Pasta, Waffles)",
         "Artisanal Indian Sweets, Fusion Desserts & Ice Cream Counters",
         "Welcome Drinks, Mocktail Bars & Refreshments",
-        "Pre-event Menu Tasting Sessions for Up to 6 Family Members",
         "Professional Uniformed Servers, Cutlery & Table Linen Setup"
       ]
     },
@@ -280,11 +279,7 @@ const SITE_CONFIG = {
     },
     {
       question: "Do you take up event projects outside Bengaluru?",
-      answer: "Our core team is based in Bengaluru, but we frequently execute destination weddings and celebrations across Karnataka, Goa, Mysore, Coorg, and neighboring southern states upon request."
-    },
-    {
-      question: "Is menu tasting available before finalizing the catering order?",
-      answer: "Absolutely. Once the initial catering concept is aligned, we host an exclusive food tasting session for up to 6 family members at our Indiranagar kitchen facility."
+      answer: "Yes! Our core team is based in Bengaluru, and we plan and execute weddings, birthdays and corporate events all over India, including destination celebrations."
     },
     {
       question: "What are the payment terms and booking process?",

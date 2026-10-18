@@ -206,7 +206,7 @@ const SITE_CONFIG = {
       slug: "photography",
       title: "PHOTOGRAPHY & CINEMA",
       subtitle: "Candid Moments, Pre-Wedding Films & Heirloom Albums",
-      image: "assets/images/service-photography.svg",
+      image: "assets/images/events/makeup/makeup-10.jpg",
       summary: "Capture the emotion, laughter, and romance of your celebration with cinematic 4K video and candid photography.",
       description: "Our visual storytellers document every tender glance and joyful dance step without interrupting the flow of your event. We deliver high-resolution edited photos, 4K teasers, and heirloom albums.",
       included: [
@@ -224,7 +224,7 @@ const SITE_CONFIG = {
       slug: "makeup",
       title: "MAKEUP ARTISTRY",
       subtitle: "HD & Airbrush Bridal Makeup, Hair Styling & Draping",
-      image: "assets/images/service-makeup.svg",
+      image: "assets/images/events/makeup/makeup-07.jpg",
       summary: "Exquisite bridal makeup and party styling that enhances your natural beauty for camera and crowd alike.",
       description: "Our senior makeup artists create timeless, radiant looks using luxury international products. We offer on-location services across Bengaluru so you can relax on your special day.",
       included: [

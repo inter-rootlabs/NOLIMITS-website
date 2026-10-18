@@ -2071,3 +2071,27 @@ section[id], [id].service-detail, main [id] { scroll-margin-top: 110px; }
   .nav-pill { padding-left: 14px; padding-right: 14px; }
   .logo-subtext { letter-spacing: 1px; }
 }
+
+/* Services page: alternating text/image rows; image always first on mobile */
+.service-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.service-split > * { min-width: 0; }
+
+.service-split-media { order: -1; }
+
+.service-split .hero-image-frame { max-height: 480px; }
+
+@media (min-width: 768px) {
+  .service-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .service-split-media { order: 0; }
+  .service-split.reverse .service-split-media { order: -1; }
+}

@@ -80,7 +80,7 @@ const GALLERY_ITEMS = [
     eventName: "Live Tandoor & Chaat Pavilion",
     date: "2026-03-25",
     location: "Indiranagar, Bengaluru",
-    src: "assets/images/gallery/nlstandimg.jpg",
+    src: "assets/images/gallery/nlstandimg1.jpg",
     alt: "Artisanal live chaat counter with traditional earthen pots",
     featured: true
   },

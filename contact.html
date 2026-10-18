@@ -171,7 +171,7 @@
           
           <!-- LEFT COLUMN: INTERACTIVE ENQUIRY FORM -->
           <div style="background: var(--ink); border: 1px solid rgba(217,164,65,0.25); border-radius: var(--radius-card); padding: clamp(24px, 4vw, 44px); box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid rgba(217,164,65,0.15);">
+            <div class="form-card-header">
               <div>
                 <h2 class="font-display" style="font-size: 1.6rem; color: var(--gold-light);">EVENT ENQUIRY FORM</h2>
                 <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">Fields marked with * are required.</p>
@@ -184,7 +184,7 @@
               <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
 
               <!-- Name & Phone -->
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 20px;">
                 <div class="form-group">
                   <label for="form-name">Full Name *</label>
                   <input type="text" id="form-name" class="form-control" placeholder="e.g. Vikramaditya Sharma" required>
@@ -199,7 +199,7 @@
               </div>
 
               <!-- Email & Occasion -->
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 20px;">
                 <div class="form-group">
                   <label for="form-email">Email Address *</label>
                   <input type="email" id="form-email" class="form-control" placeholder="e.g. vikram@example.com" required>
@@ -242,7 +242,7 @@
               </div>
 
               <!-- Date & Location -->
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 10px;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 20px; margin-top: 10px;">
                 <div class="form-group">
                   <label for="form-date">Event Date (Tentative)</label>
                   <input type="date" id="form-date" class="form-control">
@@ -255,7 +255,7 @@
               </div>
 
               <!-- Guests & Budget -->
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 20px;">
                 <div class="form-group">
                   <label for="form-guests">Approximate Guest Count</label>
                   <select id="form-guests" class="form-control">
@@ -285,11 +285,11 @@
 
               <!-- Action Buttons -->
               <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px;">
-                <button type="submit" id="submit-whatsapp-btn" class="btn-pill btn-primary" style="flex: 1; min-width: 240px;">
+                <button type="submit" id="submit-whatsapp-btn" class="btn-pill btn-primary" style="flex: 1 1 240px;">
                   Send Enquiry via WhatsApp
                   <span class="btn-arrow-badge">→</span>
                 </button>
-                <button type="button" id="submit-email-btn" class="btn-pill btn-secondary" style="flex: 1; min-width: 200px;">
+                <button type="button" id="submit-email-btn" class="btn-pill btn-secondary" style="flex: 1 1 200px;">
                   Send via Email
                   <span class="btn-arrow-badge">✉</span>
                 </button>
@@ -360,20 +360,18 @@
             </div>
 
             <!-- Google Maps Embed Card -->
-            <div style="border-radius: var(--radius-card); overflow: hidden; border: 1px solid rgba(217,164,65,0.25); height: 280px; position: relative;">
+            <div class="map-embed-card">
               <iframe
                 title="NoLimits Events Studio Location Bengaluru"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.953685987158!2d77.6385!3d12.9784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1681439223e7%3A0xd689e7c5b610c14b!2sIndiranagar%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style="border:0; filter: grayscale(0.8) invert(0.9) contrast(1.2);"
+                style="filter: grayscale(0.8) invert(0.9) contrast(1.2);"
                 allowfullscreen=""
                 loading="lazy">
               </iframe>
             </div>
 
             <!-- Trust Badges Row -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 12px;">
               <div style="background: var(--ink); border: 1px solid rgba(217,164,65,0.2); border-radius: 12px; padding: 14px; text-align: center;">
                 <div style="color: var(--gold); font-size: 1.2rem;">⚡</div>
                 <div style="font-family: var(--font-nav); font-size: 0.7rem; color: var(--gold-light); margin-top: 4px; letter-spacing: 1px;">24H RESPONSE</div>

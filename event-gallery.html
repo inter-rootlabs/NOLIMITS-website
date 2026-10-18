@@ -146,7 +146,7 @@
         <div class="gallery-filter-bar">
           <!-- Occasion Filters -->
           <div id="occasion-filters" class="filter-group">
-            <span style="font-family: var(--font-nav); font-size: 0.7rem; color: var(--gold-light); letter-spacing: 1px; margin-right: 4px;">OCCASION:</span>
+            <span class="filter-label">OCCASION:</span>
             <button class="filter-btn active" data-value="all">All</button>
             <button class="filter-btn" data-value="weddings">Weddings</button>
             <button class="filter-btn" data-value="birthdays">Birthdays</button>
@@ -156,7 +156,7 @@
 
           <!-- Service Filters -->
           <div id="service-filters" class="filter-group">
-            <span style="font-family: var(--font-nav); font-size: 0.7rem; color: var(--gold-light); letter-spacing: 1px; margin-right: 4px;">SERVICE:</span>
+            <span class="filter-label">SERVICE:</span>
             <button class="filter-btn active" data-value="all">All</button>
             <button class="filter-btn" data-value="catering">Catering</button>
             <button class="filter-btn" data-value="decor">Décor</button>
@@ -166,21 +166,21 @@
 
           <!-- Media Filters -->
           <div id="media-filters" class="filter-group">
-            <span style="font-family: var(--font-nav); font-size: 0.7rem; color: var(--gold-light); letter-spacing: 1px; margin-right: 4px;">MEDIA:</span>
+            <span class="filter-label">MEDIA:</span>
             <button class="filter-btn active" data-value="all">All</button>
             <button class="filter-btn" data-value="photo">Photos</button>
             <button class="filter-btn" data-value="video">Videos</button>
           </div>
 
           <!-- View Toggle & Result Count -->
-          <div style="display: flex; align-items: center; gap: 16px; width: 100%; justify-content: space-between; padding-top: 8px; border-top: 1px solid rgba(217,164,65,0.15);">
-            <div id="gallery-count" style="font-family: var(--font-nav); font-size: 0.8rem; color: var(--gold-light); letter-spacing: 1px;">
+          <div class="gallery-toolbar-row">
+            <div id="gallery-count" class="gallery-count" aria-live="polite">
               Loading Moments...
             </div>
 
-            <div style="display: flex; gap: 8px;">
-              <button class="filter-btn view-toggle-btn active" data-mode="all-media" style="font-size: 0.7rem;">Grid View</button>
-              <button class="filter-btn view-toggle-btn" data-mode="by-event" style="font-size: 0.7rem;">By Event View</button>
+            <div class="view-toggle-group">
+              <button class="filter-btn view-toggle-btn active" data-mode="all-media">Grid View</button>
+              <button class="filter-btn view-toggle-btn" data-mode="by-event">By Event View</button>
             </div>
           </div>
         </div>

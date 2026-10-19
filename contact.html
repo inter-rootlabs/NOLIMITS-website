@@ -159,7 +159,7 @@
           LET'S PLAN SOMETHING <br><span class="text-gold-foil">UNFORGETTABLE</span>
         </h1>
         <p style="max-width: 620px; margin: 16px auto 0 auto; color: var(--text-muted); font-size: var(--fs-body);">
-          Whether you are organizing a royal wedding mandap, an intimate sangeet, live catering feasts, or a corporate summit across Bengaluru, share your vision with us. We respond within 24 hours.
+          Whether you are organizing a royal wedding mandap, an intimate sangeet, live catering feasts, or a corporate summit across India, share your vision with us. We respond within 24 hours.
         </p>
       </div>
     </section>
@@ -263,9 +263,10 @@
                     <option value="100 - 300 Guests" selected>100 - 300 Guests (Standard)</option>
                     <option value="300 - 600 Guests">300 - 600 Guests (Grand Celebration)</option>
                     <option value="600 - 1000+ Guests">600 - 1000+ Guests (Royal Gala)</option>
+                    <option value=1000 - more Guests">1000 - more Guests (Grand Royal Gala)</option>
                   </select>
                 </div>
-
+<!--
                 <div class="form-group">
                   <label for="form-budget">Estimated Budget Range</label>
                   <select id="form-budget" class="form-control">
@@ -317,7 +318,7 @@
                 <div>
                   <h4 class="font-nav" style="font-size: 0.72rem; letter-spacing: 2px; color: var(--gold-light); text-transform: uppercase;">PHONE & WHATSAPP</h4>
                   <p style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-top: 4px;">
-                    <a href="tel:+919876543210" style="color: #fff;">+91 98765 43210</a>
+                    <a href="tel:+919876543210" style="color: #fff;">+91 9743183364</a>
                   </p>
                   <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;">Instant WhatsApp support 7 days a week</p>
                 </div>
@@ -340,7 +341,7 @@
                 <div>
                   <h4 class="font-nav" style="font-size: 0.72rem; letter-spacing: 2px; color: var(--gold-light); text-transform: uppercase;">CONSULTATION HOURS</h4>
                   <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 4px;">
-                    Monday – Sunday: 9:00 AM – 8:00 PM IST <br>
+                    Monday – Saturday: 10:00 AM – 7:30 PM IST <br>
                     <span style="color: var(--pink); font-size: 0.8rem;">(In-person consultations by prior appointment)</span>
                   </p>
                 </div>
@@ -352,7 +353,7 @@
                   Quick WhatsApp Chat
                   <span class="btn-arrow-badge">💬</span>
                 </a>
-                <a href="tel:+919876543210" class="btn-pill btn-secondary" style="font-size: 0.78rem; padding: 10px 20px;">
+                <a href="tel:+919743183364" class="btn-pill btn-secondary" style="font-size: 0.78rem; padding: 10px 20px;">
                   Call Directly
                   <span class="btn-arrow-badge">📞</span>
                 </a>
@@ -382,12 +383,14 @@
                 <div style="font-family: var(--font-nav); font-size: 0.7rem; color: var(--gold-light); margin-top: 4px; letter-spacing: 1px;">PAN-INDIA EVENTS</div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">We travel to your venue</div>
               </div>
+              <!--
               <div style="background: var(--ink); border: 1px solid rgba(217,164,65,0.2); border-radius: 12px; padding: 14px; text-align: center;">
                 <div style="color: var(--gold); font-size: 1.2rem;">🌸</div>
                 <div style="font-family: var(--font-nav); font-size: 0.7rem; color: var(--gold-light); margin-top: 4px; letter-spacing: 1px;">3D BLUEPRINTS</div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Visual stage concept preview</div>
               </div>
             </div>
+              -->
 
           </div>
         </div>
@@ -424,7 +427,7 @@
       </div>
 
       <div class="footer-bottom-bar">
-        <div class="footer-kannada">ಸ್ವಾಗತ · Welcome to Bengaluru</div>
+        <div class="footer-kannada">ಸ್ವಾಗತ · Welcome to NO LIMITS</div>
         <div>© <span id="footer-year">2026</span> NoLimits Events. All rights reserved.</div>
         <div style="display: flex; gap: 16px;">
           <a href="https://instagram.com" target="_blank" rel="noopener" style="color: var(--text-muted);">Instagram</a>
@@ -562,7 +565,7 @@
         if (!validateForm()) return;
 
         const payload = getFormDataPayload();
-        const waNumber = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG?.contact?.whatsappNumber) ? SITE_CONFIG.contact.whatsappNumber : "919876543210";
+        const waNumber = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG?.contact?.whatsappNumber) ? SITE_CONFIG.contact.whatsappNumber : "919743183364";
         const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(payload.text)}`;
 
         successBanner.style.display = 'block';
@@ -577,7 +580,7 @@
           if (!validateForm()) return;
 
           const payload = getFormDataPayload();
-          const targetEmail = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG?.contact?.email) ? SITE_CONFIG.contact.email : "info@nolimitsevents.in";
+          const targetEmail = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG?.contact?.email) ? SITE_CONFIG.contact.email : "nolimitseventsorg@gmail.com";
           const subject = encodeURIComponent(`Celebration Enquiry: ${payload.name} - ${document.getElementById('form-occasion').value}`);
           const body = encodeURIComponent(payload.text);
 

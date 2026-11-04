@@ -23,13 +23,13 @@ const SITE_CONFIG = {
     email: "info@nolimitsevents.in",
     address: "#42, Royal Heritage Plaza, Indiranagar, Bengaluru, Karnataka 560038, India",
     hours: "Mon - Sun: 9:00 AM - 8:00 PM IST",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.953685987158!2d77.6385!3d12.9784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1681439223e7%3A0xd689e7c5b610c14b!2sIndiranagar%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    mapEmbedUrl: "https://maps.google.com/maps?q=12.894444,77.5311003&z=17&output=embed",
     // Formspree or custom form backend endpoint (Optional. If empty, falls back to prefilled WhatsApp & Mailto)
     formEndpoint: "" 
   },
 
   socials: [
-    { name: "Instagram", url: "https://instagram.com/nolimitsevents_blr", icon: "instagram" },
+    { name: "Instagram", url: "https://www.instagram.com/nolimits3364", icon: "instagram" },
     { name: "Facebook", url: "https://facebook.com/nolimitsevents.bengaluru", icon: "facebook" },
     { name: "YouTube", url: "https://youtube.com/@nolimitsevents", icon: "youtube" },
     { name: "WhatsApp", url: "https://wa.me/919743183364", icon: "whatsapp" }

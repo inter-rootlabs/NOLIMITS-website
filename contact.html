@@ -263,17 +263,7 @@
                     <option value="100 - 300 Guests" selected>100 - 300 Guests (Standard)</option>
                     <option value="300 - 600 Guests">300 - 600 Guests (Grand Celebration)</option>
                     <option value="600 - 1000+ Guests">600 - 1000+ Guests (Royal Gala)</option>
-                    <option value=1000 - more Guests">1000 - more Guests (Grand Royal Gala)</option>
-                  </select>
-                </div>
-<!--
-                <div class="form-group">
-                  <label for="form-budget">Estimated Budget Range</label>
-                  <select id="form-budget" class="form-control">
-                    <option value="₹1.5 Lakhs - ₹3.5 Lakhs">₹1.5 Lakhs - ₹3.5 Lakhs</option>
-                    <option value="₹3.5 Lakhs - ₹7 Lakhs" selected>₹3.5 Lakhs - ₹7 Lakhs</option>
-                    <option value="₹7 Lakhs - ₹15 Lakhs">₹7 Lakhs - ₹15 Lakhs</option>
-                    <option value="₹15 Lakhs+">₹15 Lakhs+ (Luxury Suite)</option>
+                    <option value="1000 - more Guests">1000 - more Guests (Grand Royal Gala)</option>
                   </select>
                 </div>
               </div>
@@ -289,10 +279,6 @@
                 <button type="submit" id="submit-whatsapp-btn" class="btn-pill btn-primary" style="flex: 1 1 240px;">
                   Send Enquiry via WhatsApp
                   <span class="btn-arrow-badge">→</span>
-                </button>
-                <button type="button" id="submit-email-btn" class="btn-pill btn-secondary" style="flex: 1 1 200px;">
-                  Send via Email
-                  <span class="btn-arrow-badge">✉</span>
                 </button>
               </div>
             </form>
@@ -389,8 +375,8 @@
                 <div style="font-family: var(--font-nav); font-size: 0.7rem; color: var(--gold-light); margin-top: 4px; letter-spacing: 1px;">3D BLUEPRINTS</div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">Visual stage concept preview</div>
               </div>
-            </div>
               -->
+            </div>
 
           </div>
         </div>
@@ -485,7 +471,6 @@
 
       // 2. Client-side Form Validation & Submission
       const form = document.getElementById('contact-enquiry-form');
-      const emailBtn = document.getElementById('submit-email-btn');
       const successBanner = document.getElementById('form-success-banner');
 
       function validateForm() {
@@ -535,7 +520,6 @@
         const date = document.getElementById('form-date').value || 'To be decided';
         const venue = document.getElementById('form-venue').value || 'Bengaluru';
         const guests = document.getElementById('form-guests').value;
-        const budget = document.getElementById('form-budget').value;
         const message = document.getElementById('form-message').value.trim() || 'None';
 
         const selectedServices = [];
@@ -553,7 +537,6 @@
           `📅 *Event Date:* ${date}\n` +
           `📍 *Venue/Area:* ${venue}\n` +
           `👥 *Guest Count:* ${guests}\n` +
-          `💰 *Estimated Budget:* ${budget}\n` +
           `📝 *Vision Notes:* ${message}\n` +
           `-----------------------------------\n` +
           `_Sent from nolimitsevents.in_`;
@@ -571,25 +554,8 @@
         const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(payload.text)}`;
 
         successBanner.style.display = 'block';
-        setTimeout(() => {
-          window.open(waUrl, '_blank');
-        }, 600);
+        window.open(waUrl, '_blank', 'noopener');
       });
-
-      // Email (mailto) Submission
-      if (emailBtn) {
-        emailBtn.addEventListener('click', () => {
-          if (!validateForm()) return;
-
-          const payload = getFormDataPayload();
-          const targetEmail = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG?.contact?.email) ? SITE_CONFIG.contact.email : "nolimitseventsorg@gmail.com";
-          const subject = encodeURIComponent(`Celebration Enquiry: ${payload.name} - ${document.getElementById('form-occasion').value}`);
-          const body = encodeURIComponent(payload.text);
-
-          successBanner.style.display = 'block';
-          window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
-        });
-      }
     });
   </script>
 </body>

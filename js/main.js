@@ -402,7 +402,7 @@ function initWhatsAppButton() {
   const waBtn = document.getElementById('whatsapp-float-btn');
   if (!waBtn) return;
 
-  const waNumber = SITE_CONFIG?.contact?.whatsappNumber || "919876543210";
+  const waNumber = SITE_CONFIG?.contact?.whatsappNumber || "919743183364";
   const defaultMsg = encodeURIComponent(SITE_CONFIG?.contact?.whatsappDefaultMessage || "Hi NoLimits Events, I'd like to plan an event.");
 
   waBtn.setAttribute('href', `https://wa.me/${waNumber}?text=${defaultMsg}`);

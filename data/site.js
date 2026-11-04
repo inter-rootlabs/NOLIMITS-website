@@ -18,7 +18,7 @@ const SITE_CONFIG = {
   contact: {
     phone: "+91 98765 43210",
     phoneClean: "919876543210",
-    whatsappNumber: "919876543210",
+    whatsappNumber: "919743183364",
     whatsappDefaultMessage: "Hi NoLimits Events, I'd like to plan an event in Bengaluru.",
     email: "info@nolimitsevents.in",
     address: "#42, Royal Heritage Plaza, Indiranagar, Bengaluru, Karnataka 560038, India",
@@ -32,7 +32,7 @@ const SITE_CONFIG = {
     { name: "Instagram", url: "https://instagram.com/nolimitsevents_blr", icon: "instagram" },
     { name: "Facebook", url: "https://facebook.com/nolimitsevents.bengaluru", icon: "facebook" },
     { name: "YouTube", url: "https://youtube.com/@nolimitsevents", icon: "youtube" },
-    { name: "WhatsApp", url: "https://wa.me/919876543210", icon: "whatsapp" }
+    { name: "WhatsApp", url: "https://wa.me/919743183364", icon: "whatsapp" }
   ],
 
   heroSlides: [

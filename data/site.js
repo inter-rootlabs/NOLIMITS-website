@@ -16,8 +16,8 @@ const SITE_CONFIG = {
   },
   
   contact: {
-    phone: "+91 98765 43210",
-    phoneClean: "919876543210",
+    phone: "+91 97431 83364",
+    phoneClean: "919743183364",
     whatsappNumber: "919743183364",
     whatsappDefaultMessage: "Hi NoLimits Events, I'd like to plan an event in Bengaluru.",
     email: "info@nolimitsevents.in",
